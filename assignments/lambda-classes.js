@@ -31,3 +31,25 @@ class Instructor extends Person {
     console.log(`${stdOb.name} receives a perfect score on ${subStr}.`);
   }
 }
+
+// STUDENT CHILD CLASS OF PERSON/BASE
+class Student extends Person {
+  constructor(studProps) {
+    super(studProps);
+    this.previousBackground = studProps.previousBackground;
+    this.className = studProps.className;
+    this.favSubjects = studProps.favSubjects;
+  }
+
+  listsSubjects() {
+    console.log(student.favSubjects.length);
+  }
+
+  PRAssignment(subject) {
+    console.log(`${student.name} has submitted a PR for ${subject}.`);
+  }
+
+  sprintChallenge(subject) {
+    console.log(`${student.name} has begun sprint challenge on ${subject}`);
+  }
+}
