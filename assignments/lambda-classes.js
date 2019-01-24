@@ -93,7 +93,7 @@ const betty = new Instructor({
   catchPrase: "JS really don't care about the type."
 });
 
-const Jon = new Student({
+const jon = new Student({
   name: "Jon Palacio",
   age: 30,
   location: "Charlotte NC",
@@ -103,7 +103,7 @@ const Jon = new Student({
   favSubjects: ["JS", "HTML5", "CSS3"]
 });
 
-const Liz = new Student({
+const liz = new Student({
   name: "Liz Taylor",
   age: 39,
   location: "Atlanta GA",
@@ -111,4 +111,22 @@ const Liz = new Student({
   previousBackground: "Communcation and Logistics",
   className: "IOS2",
   favSubjects: ["Swift", "CSS"]
+});
+
+const megan = new ProjectManager({
+  name: "Megan Short",
+  age: 25,
+  location: "Seattle WA",
+  gender: "Female",
+  gradClassName: "CS2",
+  favInstructor: "Sean"
+});
+
+const murph = new ProjectManager({
+  name: "Murph Murphy",
+  age: 35,
+  location: "Orlando FL",
+  gender: "Male",
+  gradClassName: "CS6",
+  favInstructor: "Josh"
 });
