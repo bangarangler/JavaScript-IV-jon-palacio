@@ -42,15 +42,16 @@ class Student extends Person {
   }
 
   listsSubjects() {
-    console.log(student.favSubjects.length);
+    //console.log(this.favSubjects);
+    console.log(this.favSubjects.forEach(item => console.log(item)));
   }
 
   PRAssignment(subject) {
-    console.log(`${student.name} has submitted a PR for ${subject}.`);
+    console.log(`${this.name} has submitted a PR for ${subject}.`);
   }
 
   sprintChallenge(subject) {
-    console.log(`${student.name} has begun sprint challenge on ${subject}`);
+    console.log(`${this.name} has begun sprint challenge on ${subject}`);
   }
 }
 
@@ -69,7 +70,7 @@ class ProjectManager extends Instructor {
   }
 
   debugsCode(student, subject) {
-    console.log(`${this.name} debugs ${student.name}'s code on {subject}.`);
+    console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`);
   }
 }
 
@@ -130,3 +131,34 @@ const murph = new ProjectManager({
   gradClassName: "CS6",
   favInstructor: "Josh"
 });
+
+//console.log(billy.name);
+//console.log(billy.age);
+//console.log(betty.name);
+//console.log(betty.age);
+//console.log(billy.location);
+//console.log(billy.gender);
+//console.log(billy.specialty);
+//console.log(betty.favLanguage);
+//console.log(billy.catchPrase);
+//console.log(billy.demo("JS"));
+//console.log(betty.grade(liz, "IOS"));
+//console.log(liz.name);
+//console.log(liz.age);
+//console.log(liz.location);
+//console.log(liz.gender);
+//console.log(liz.previousBackground);
+//console.log(liz.className);
+//console.log(liz.favSubjects);
+//console.log(liz.listsSubjects());
+//console.log(jon.listsSubjects());
+//console.log(liz.PRAssignment("JS"));
+//console.log(liz.sprintChallenge("Android"));
+//console.log(murph.name);
+//console.log(megan.age);
+//console.log(murph.location);
+//console.log(megan.gender);
+//console.log(murph.gradClassName);
+//console.log(megan.favInstructor);
+//console.log(murph.standUp("FSW"));
+//console.log(megan.debugsCode(jon, "AI"));
