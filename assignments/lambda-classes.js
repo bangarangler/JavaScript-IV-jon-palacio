@@ -30,6 +30,12 @@ class Instructor extends Person {
   grade(stdOb, subStr) {
     console.log(`${stdOb.name} receives a perfect score on ${subStr}.`);
   }
+
+  gradeAssign(studentGrade) {
+    let randomGrade = (studentGrade = Math.floor(Math.random() * 100) + 1);
+    randomGrade = studentGrade;
+    return randomGrade;
+  }
 }
 
 // STUDENT CHILD CLASS OF PERSON/BASE
@@ -39,6 +45,8 @@ class Student extends Person {
     this.previousBackground = studProps.previousBackground;
     this.className = studProps.className;
     this.favSubjects = studProps.favSubjects;
+    //STRETCH
+    this.grade = studProps.grade;
   }
 
   listsSubjects() {
@@ -52,6 +60,15 @@ class Student extends Person {
 
   sprintChallenge(subject) {
     console.log(`${this.name} has begun sprint challenge on ${subject}`);
+  }
+
+  //STRETCH
+  graduate() {
+    if (this.grade >= 70) {
+      console.log(`${this.name} is ready to graduate from Lambda School!`);
+    } else {
+      console.log(`Sorry ${this.name} you have to improve your grade.`);
+    }
   }
 }
 
@@ -101,7 +118,8 @@ const jon = new Student({
   gender: "Male",
   previousBackground: "Locksmith and Business Managment",
   className: "Web17",
-  favSubjects: ["JS", "HTML5", "CSS3"]
+  favSubjects: ["JS", "HTML5", "CSS3"],
+  grade: 98
 });
 
 const liz = new Student({
@@ -111,7 +129,8 @@ const liz = new Student({
   gender: "Female",
   previousBackground: "Communcation and Logistics",
   className: "IOS2",
-  favSubjects: ["Swift", "CSS"]
+  favSubjects: ["Swift", "CSS"],
+  grade: 88
 });
 
 const megan = new ProjectManager({
@@ -162,3 +181,6 @@ const murph = new ProjectManager({
 //console.log(megan.favInstructor);
 //console.log(murph.standUp("FSW"));
 //console.log(megan.debugsCode(jon, "AI"));
+console.log(murph.gradeAssign(jon.grade));
+
+console.log(jon.graduate(murph.gradeAssign(jon.grade)));
